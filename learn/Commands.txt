@@ -1,0 +1,12 @@
+# Build the image
+
+docker build -t staticweb  .     
+
+# Run the image
+
+docker run -p 8989:80 staticweb
+
+# Run the image with a volume
+
+docker run -p 8989:80 -v $(pwd):/usr/share/nginx/html  staticweb
+
